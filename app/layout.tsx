@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://murmur-log.murphywang225.chatgpt.site"),
   title: "MurMur Log",
   description:
     "Learning, writing, and building a system for human intention to emerge and become real.",
