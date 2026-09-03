@@ -24,7 +24,6 @@ export function SiteFooter() {
       <span>MurMur Log</span>
       <span className="footer-links">
         <Link href="/feed.xml">RSS</Link>
-        <span>London · 2026</span>
       </span>
     </footer>
   );

@@ -1,4 +1,4 @@
-import { Arrow, SiteFooter, SiteHeader } from "./components/SiteChrome";
+import { SiteFooter, SiteHeader } from "./components/SiteChrome";
 import Link from "next/link";
 
 export default function Home() {
@@ -6,45 +6,35 @@ export default function Home() {
     <main>
       <SiteHeader />
 
-      <section className="hero shell" aria-labelledby="site-title">
-        <p className="eyebrow">A personal log by Murphy Wang</p>
+      <section className="home-intro shell" aria-labelledby="site-title">
         <h1 id="site-title">
-          Learning, writing, and building
-          <br />
-          a system for <em>human intention</em>
-          <br />
+          Learning, writing, and building a system for <em>human intention</em>{" "}
           to emerge and become real.
         </h1>
-        <Link className="quiet-link" href="/projects/arcfold">
-          Currently building: Arcfold <Arrow />
-        </Link>
       </section>
 
-      <section className="index-grid shell" aria-label="Site sections">
-        <Link className="index-card" href="/essays">
-          <span className="index-number">01</span>
-          <span>
-            <strong>文章</strong>
-            <small>完整的观点与阶段结论</small>
-          </span>
-          <Arrow />
-        </Link>
-        <Link className="index-card" href="/projects">
-          <span className="index-number">02</span>
-          <span>
-            <strong>项目</strong>
-            <small>持续演进的工作与证据</small>
-          </span>
-          <Arrow />
-        </Link>
-        <Link className="index-card" href="/about">
-          <span className="index-number">03</span>
-          <span>
-            <strong>关于</strong>
-            <small>Murphy 与这份长期实践</small>
-          </span>
-          <Arrow />
-        </Link>
+      <section className="home-stream shell" aria-label="Latest from MurMur Log">
+        <div className="stream-section">
+          <div className="stream-heading">
+            <h2>文章</h2>
+            <Link href="/essays">全部文章</Link>
+          </div>
+          <Link className="stream-row" href="/essays">
+            <span className="placeholder">第一篇文章标题</span>
+            <span aria-hidden="true">→</span>
+          </Link>
+        </div>
+
+        <div className="stream-section">
+          <div className="stream-heading">
+            <h2>项目</h2>
+            <Link href="/projects">全部项目</Link>
+          </div>
+          <Link className="stream-row" href="/projects/arcfold">
+            <strong>Arcfold</strong>
+            <span aria-hidden="true">→</span>
+          </Link>
+        </div>
       </section>
 
       <SiteFooter />
