@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>MurMur Log</title>
+  <subtitle>Learning, writing, and building a system for human intention to emerge and become real.</subtitle>
+  <link href="https://murmurlog.com/" />
+  <link href="https://murmurlog.com/feed.xml" rel="self" type="application/atom+xml" />
+  <id>https://murmurlog.com/</id>
+  <updated>2026-09-17T00:00:00Z</updated>
+  <author><name>Murphy Wang</name></author>
+</feed>
