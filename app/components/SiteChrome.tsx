@@ -9,9 +9,6 @@ export function SiteHeader() {
       <Link className="wordmark" href="/" aria-label="MurMur Log home">
         MurMur <i>Log</i>
       </Link>
-      <nav aria-label="Main navigation">
-        <Link href="/about">关于</Link>
-      </nav>
     </header>
   );
 }

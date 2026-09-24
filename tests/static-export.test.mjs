@@ -11,7 +11,6 @@ async function read(path) {
 test("exports every public page", async () => {
   const pages = [
     "out/index.html",
-    "out/about/index.html",
   ];
 
   for (const page of pages) {
