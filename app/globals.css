@@ -43,12 +43,9 @@ h1 em { color: var(--moss); font-weight: 400; }
 .stream-section { padding: 34px 0 18px; }
 .stream-heading { display: flex; align-items: baseline; justify-content: space-between; padding-bottom: 14px; border-bottom: 1px solid var(--ink); }
 .stream-heading h2 { margin: 0; font: 600 17px/1.2 var(--font-geist-sans), sans-serif; }
-.stream-heading a { color: var(--muted); font-size: 13px; }
-.stream-heading a:hover { color: var(--moss); }
 .stream-row { min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 24px; border-bottom: 1px solid var(--rule); font: 400 20px/1.35 Georgia, "Times New Roman", serif; }
 .stream-row strong { font-weight: 400; }
-.stream-row > span[aria-hidden] { color: var(--moss); font-family: Arial, sans-serif; }
-.stream-row:hover { color: var(--moss); }
+.stream-row .placeholder { text-decoration: none; }
 .index-number { align-self: start; color: var(--muted); font: 500 11px/1 var(--font-geist-mono), monospace; }
 .site-footer { min-height: 106px; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--rule); color: var(--muted); font: 500 11px/1 var(--font-geist-mono), monospace; letter-spacing: 0.06em; text-transform: uppercase; }
 .footer-links { display: flex; gap: 28px; }

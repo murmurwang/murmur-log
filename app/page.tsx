@@ -1,5 +1,4 @@
 import { SiteFooter, SiteHeader } from "./components/SiteChrome";
-import Link from "next/link";
 
 export default function Home() {
   return (
@@ -17,23 +16,19 @@ export default function Home() {
         <div className="stream-section">
           <div className="stream-heading">
             <h2>文章</h2>
-            <Link href="/essays">全部文章</Link>
           </div>
-          <Link className="stream-row" href="/essays">
+          <div className="stream-row">
             <span className="placeholder">第一篇文章标题</span>
-            <span aria-hidden="true">→</span>
-          </Link>
+          </div>
         </div>
 
         <div className="stream-section">
           <div className="stream-heading">
             <h2>项目</h2>
-            <Link href="/projects">全部项目</Link>
           </div>
-          <Link className="stream-row" href="/projects/arcfold">
+          <div className="stream-row">
             <strong>Arcfold</strong>
-            <span aria-hidden="true">→</span>
-          </Link>
+          </div>
         </div>
       </section>
 

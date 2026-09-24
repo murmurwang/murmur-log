@@ -10,8 +10,6 @@ export function SiteHeader() {
         MurMur <i>Log</i>
       </Link>
       <nav aria-label="Main navigation">
-        <Link href="/essays">文章</Link>
-        <Link href="/projects">项目</Link>
         <Link href="/about">关于</Link>
       </nav>
     </header>

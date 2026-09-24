@@ -11,10 +11,6 @@ async function read(path) {
 test("exports every public page", async () => {
   const pages = [
     "out/index.html",
-    "out/essays/index.html",
-    "out/projects/index.html",
-    "out/projects/arcfold/index.html",
-    "out/projects/arcfold/latent-intent/index.html",
     "out/about/index.html",
   ];
 

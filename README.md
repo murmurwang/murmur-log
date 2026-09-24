@@ -19,8 +19,7 @@ npm test
 
 ## 内容结构
 
-- `app/essays/`：文章
-- `app/projects/`：项目与模块文档
+- `app/page.tsx`：首页，文章和项目仅作文字展示，无子页面或跳转入口
 - `app/about/`：关于
 - `public/feed.xml`：RSS/Atom 订阅
 
