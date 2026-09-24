@@ -3,11 +3,11 @@
 :root {
   --font-geist-sans: Arial, Helvetica, "PingFang SC", "Microsoft YaHei", sans-serif;
   --font-geist-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
-  --paper: #fbfaf7;
-  --ink: #20211f;
-  --muted: #74766f;
-  --rule: #deddd7;
-  --moss: #536b54;
+  --paper: #d8ccdc;
+  --ink: #37303e;
+  --muted: #60546a;
+  --rule: #b1a1b8;
+  --moss: #60546a;
 }
 
 * { box-sizing: border-box; }
