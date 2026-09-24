@@ -1,4 +1,4 @@
-import { SiteFooter, SiteHeader } from "./components/SiteChrome";
+import { SiteHeader } from "./components/SiteChrome";
 
 export default function Home() {
   return (
@@ -31,8 +31,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <SiteFooter />
     </main>
   );
 }

@@ -13,23 +13,11 @@ export function SiteHeader() {
   );
 }
 
-export function SiteFooter() {
-  return (
-    <footer className="site-footer shell">
-      <span>MurMur Log</span>
-      <span className="footer-links">
-        <Link href="/feed.xml">RSS</Link>
-      </span>
-    </footer>
-  );
-}
-
 export function PageShell({ children }: { children: ReactNode }) {
   return (
     <main>
       <SiteHeader />
       {children}
-      <SiteFooter />
     </main>
   );
 }
