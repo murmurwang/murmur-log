@@ -1,23 +1,17 @@
-import { SiteHeader } from "./components/SiteChrome";
+import { ArticleIcon, SiteHeader } from "./components/SiteChrome";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <main>
-      <SiteHeader />
-      <section className="home-intro shell" aria-labelledby="site-title">
-        <h1 id="site-title">
-          Learning, writing, and building a system for human intention{" "}
-          to emerge and become real.
-        </h1>
-      </section>
+      <SiteHeader home />
       <div className="home-stream shell">
         <section className="stream-section" id="thoughts" aria-labelledby="thoughts-title">
           <div className="stream-heading">
             <h2 id="thoughts-title">个人思考</h2>
           </div>
           <Link className="stream-row" href="/posts/finding-direction-through-writing/">
-            <strong>一个工作复盘的方式</strong>
+            <span className="article-title"><ArticleIcon /><span>一个工作复盘的方式</span></span>
             <time className="post-date" dateTime="2026-11-02">2026.11.02</time>
           </Link>
         </section>
@@ -26,7 +20,7 @@ export default function Home() {
             <h2 id="reviews-title">工作复盘</h2>
           </div>
           <Link className="stream-row" href="/posts/work-review-1102/">
-            <strong>工作复盘 1102｜目标是怎么弄丢的</strong>
+            <span className="article-title"><ArticleIcon /><span>工作复盘 1102｜目标是怎么弄丢的</span></span>
             <time className="post-date" dateTime="2026-11-02">2026.11.02</time>
           </Link>
         </section>
