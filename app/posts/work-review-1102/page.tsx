@@ -22,10 +22,10 @@ export const metadata: Metadata = {
 
 export default function WorkReview1102() {
   return (
-    <PageShell>
+    <PageShell section="reviews">
       <article className="post shell">
         <header className="post-header">
-          <Link className="breadcrumb" href="/#reviews">← 工作复盘</Link>
+          <Link className="breadcrumb" href="/reviews/">← 工作复盘</Link>
           <h1>{title}</h1>
           <p className="post-meta"><time dateTime="2026-11-02">2026.11.02</time> · Murphy Wang</p>
         </header>

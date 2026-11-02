@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const Arrow = () => <span aria-hidden="true">↗</span>;
 
-export function SiteHeader({ home = false }: { home?: boolean }) {
+export function SiteHeader({ home = false, section }: { home?: boolean; section?: string }) {
   return (
     <header className={`site-header shell${home ? " site-header--home" : ""}`}>
       {home ? (
@@ -15,18 +15,18 @@ export function SiteHeader({ home = false }: { home?: boolean }) {
         <Link className="wordmark" href="/" aria-label="MurMur Log home">MurMur Log</Link>
       )}
       <nav aria-label="栏目导航">
-        <Link href="/#thoughts">个人思考</Link>
-        <Link href="/#reviews">工作复盘</Link>
-        <Link href="/#projects">项目</Link>
+        <Link href="/projects/" aria-current={section === "projects" ? "page" : undefined}>项目</Link>
+        <Link href="/reviews/" aria-current={section === "reviews" ? "page" : undefined}>工作复盘</Link>
+        <Link href="/thoughts/" aria-current={section === "thoughts" ? "page" : undefined}>个人思考</Link>
       </nav>
     </header>
   );
 }
 
-export function PageShell({ children }: { children: ReactNode }) {
+export function PageShell({ children, section }: { children: ReactNode; section?: string }) {
   return (
     <main>
-      <SiteHeader />
+      <SiteHeader section={section} />
       {children}
     </main>
   );

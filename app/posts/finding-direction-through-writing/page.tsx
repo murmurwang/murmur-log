@@ -15,10 +15,10 @@ export const metadata: Metadata = {
 
 export default function FindingDirectionThroughWriting() {
   return (
-    <PageShell>
+    <PageShell section="thoughts">
       <article className="post shell">
         <header className="post-header">
-          <Link className="breadcrumb" href="/#thoughts">← 个人思考</Link>
+          <Link className="breadcrumb" href="/thoughts/">← 个人思考</Link>
           <h1>{title}</h1>
           <p className="post-meta"><time dateTime="2026-11-02">2026.11.02</time> · Murphy Wang</p>
         </header>
