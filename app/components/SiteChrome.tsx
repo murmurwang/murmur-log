@@ -7,7 +7,7 @@ export function SiteHeader() {
   return (
     <header className="site-header shell">
       <Link className="wordmark" href="/" aria-label="MurMur Log home">
-        MurMur <i>Log</i>
+        MurMur Log
       </Link>
       <nav aria-label="栏目导航">
         <Link href="/#thoughts">个人思考</Link>
