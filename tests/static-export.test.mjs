@@ -26,7 +26,7 @@ test("exports every public page", async () => {
 
 test("publishes the work review with discoverable links", async () => {
   const article = await read("out/posts/work-review-1102/index.html");
-  assert.match(article, /工作复盘 1102/);
+  assert.match(article, /研究方法的不断细化让我偏离了最初的研究目标/);
   assert.match(article, /目标就是这样丢掉的。/);
   assert.match(await read("out/index.html"), /href="\/posts\/work-review-1102\/"/);
   assert.match(await read("out/feed.xml"), /https:\/\/murmurlog\.com\/posts\/work-review-1102\//);
@@ -48,7 +48,7 @@ test("personal writing is published in its own home module", async () => {
   }
   assert.match(home, /href="\/posts\/finding-direction-through-writing\/"/);
   const article = await read("out/posts/finding-direction-through-writing/index.html");
-  assert.match(article, /一个工作复盘的方式/);
+  assert.match(article, /用语音输入写工作复盘有助于回归整体目标/);
   assert.match(article, /我觉得可以开始尝试规律地更新博客当中的工作复盘。/);
   assert.match(await read("out/feed.xml"), /https:\/\/murmurlog\.com\/posts\/finding-direction-through-writing\//);
 });
