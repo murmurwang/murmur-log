@@ -18,6 +18,7 @@ export function SiteHeader({ home = false, section }: { home?: boolean; section?
         <span aria-hidden="true">|</span>
         <Link href="/thoughts/" aria-current={section === "thoughts" ? "page" : undefined}>个人思考</Link>
       </nav>
+      {home && <p className="site-description">Learning, writing, and building a system for human intention to emerge and become real.</p>}
     </header>
   );
 }
