@@ -3,11 +3,12 @@
 :root {
   --font-geist-sans: Arial, Helvetica, "PingFang SC", "Microsoft YaHei", sans-serif;
   --font-geist-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
-  --paper: #d8ccdc;
-  --ink: #37303e;
-  --muted: #60546a;
-  --rule: #b1a1b8;
-  --moss: #60546a;
+  --paper: #0c0c0c;
+  color-scheme: dark;
+  --ink: #f2f2f2;
+  --muted: #a3a3a3;
+  --rule: #333333;
+  --moss: #ffffff;
 }
 
 * { box-sizing: border-box; }
@@ -40,10 +41,12 @@ h1 { margin: 0; max-width: 800px; font: 400 clamp(42px, 6vw, 64px)/1.08 Georgia,
 h1 em { color: var(--moss); font-weight: 400; }
 .quiet-link { display: inline-flex; gap: 10px; align-items: center; margin-top: 44px; padding-bottom: 5px; border-bottom: 1px solid var(--ink); font-size: 14px; }
 .home-stream { padding: 36px 0 76px; }
-.stream-section { padding: 34px 0 18px; }
+.stream-section { padding: 28px 30px 10px; margin-bottom: 24px; border: 1px solid var(--rule); background: #121212; scroll-margin-top: 24px; }
+.stream-description { margin: 18px 0 8px; color: var(--muted); font-size: 14px; line-height: 1.7; }
+a:focus-visible { outline: 2px solid var(--ink); outline-offset: 6px; }
 .stream-heading { display: flex; align-items: baseline; justify-content: space-between; padding-bottom: 14px; border-bottom: 1px solid var(--ink); }
 .stream-heading h2 { margin: 0; font: 600 17px/1.2 var(--font-geist-sans), sans-serif; }
-.stream-row { min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 24px; border-bottom: 1px solid var(--rule); font: 400 20px/1.35 Georgia, "Times New Roman", serif; }
+.stream-row { min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 24px; font: 400 20px/1.6 Georgia, "Times New Roman", serif; }
 .stream-row strong { font-weight: 400; }
 .stream-row[href]:hover strong { text-decoration: underline; text-underline-offset: 5px; }
 .post-date { flex-shrink: 0; color: var(--muted); font: 400 12px/1.4 var(--font-geist-mono), monospace; }
@@ -96,7 +99,10 @@ h1 em { color: var(--moss); font-weight: 400; }
   h1 { font-size: clamp(40px, 11vw, 56px); line-height: 1.05; }
   .desktop-break { display: none; }
   .home-stream { padding-bottom: 54px; }
-  .stream-section { padding-top: 28px; }
+  .stream-section { padding: 24px 20px 10px; }
+  .stream-row { align-items: flex-start; flex-direction: column; gap: 12px; padding: 16px 0; }
+  .site-header { height: auto; min-height: 90px; flex-wrap: wrap; gap: 20px; padding-block: 22px; }
+  .stream-heading h2 { font-size: 18px; }
   .page-intro { padding: 58px 0 44px; }
   .project-row { grid-template-columns: 44px 1fr 20px; }
   .project-status { display: none; }

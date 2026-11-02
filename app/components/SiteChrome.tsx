@@ -9,6 +9,11 @@ export function SiteHeader() {
       <Link className="wordmark" href="/" aria-label="MurMur Log home">
         MurMur <i>Log</i>
       </Link>
+      <nav aria-label="栏目导航">
+        <Link href="/#thoughts">个人思考</Link>
+        <Link href="/#reviews">工作复盘</Link>
+        <Link href="/#projects">项目</Link>
+      </nav>
     </header>
   );
 }

@@ -12,6 +12,7 @@ test("exports every public page", async () => {
   const pages = [
     "out/index.html",
     "out/posts/work-review-1102/index.html",
+    "out/posts/finding-direction-through-writing/index.html",
   ];
 
   for (const page of pages) {
@@ -34,4 +35,17 @@ test("exports the custom domain and feed without platform bindings", async () =>
 
   const packageJson = await read("package.json");
   assert.doesNotMatch(packageJson, /openai|chatgpt|vinext|wrangler|cloudflare/i);
+});
+
+test("personal writing is published in its own home module", async () => {
+  const home = await read("out/index.html");
+  for (const id of ["thoughts", "reviews", "projects"]) {
+    assert.match(home, new RegExp(`id="${id}"`));
+    assert.match(home, new RegExp(`href="/#${id}"`));
+  }
+  assert.match(home, /href="\/posts\/finding-direction-through-writing\/"/);
+  const article = await read("out/posts/finding-direction-through-writing/index.html");
+  assert.match(article, /在表达中找回方向/);
+  assert.match(article, /方向才有机会重新清楚起来。/);
+  assert.match(await read("out/feed.xml"), /https:\/\/murmurlog\.com\/posts\/finding-direction-through-writing\//);
 });

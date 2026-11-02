@@ -19,7 +19,7 @@ npm test
 
 ## 内容结构
 
-- `app/page.tsx`：首页，文章链接至正文，项目保留简要展示
+- `app/page.tsx`：首页，个人思考、工作复盘、项目三个模块；黑白主题
 - `app/posts/`：已发布文章
 - `public/feed.xml`：RSS/Atom 订阅
 
