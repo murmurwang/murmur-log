@@ -28,7 +28,7 @@ a:focus-visible { outline: 2px solid var(--ink); outline-offset: 5px; }
 .shell { width: min(760px, calc(100% - 40px)); margin-inline: auto; }
 .site-header { padding: 32px 0 20px; display: flex; align-items: center; justify-content: space-between; gap: 24px; border-bottom: 1px solid var(--rule); }
 .wordmark { font-size: 20px; font-weight: 600; }
-nav { display: flex; gap: 22px; color: var(--muted); font-size: 14px; }
+nav { display: flex; align-items: baseline; gap: 12px; color: var(--ink); font-size: 16px; font-weight: 400; }
 .site-header--home { display: grid; grid-template-columns: 1fr auto; align-items: start; row-gap: 0; padding: 48px 0 22px; }
 .site-header--home > div { display: contents; }
 .site-header--home .site-title { grid-column: 1; grid-row: 1; }
@@ -63,7 +63,7 @@ nav a[aria-current="page"] { color: var(--ink); text-decoration: underline; text
 
 @media (max-width: 600px) {
   .site-header { padding-top: 24px; flex-wrap: wrap; gap: 14px; }
-  nav { gap: 18px; font-size: 13px; }
+  nav { gap: 10px; }
   .site-header--home { padding-top: 32px; grid-template-columns: 1fr; }
   .site-header--home nav { grid-column: 1; grid-row: 3; margin-top: 18px; }
   .site-title { font-size: 30px; }

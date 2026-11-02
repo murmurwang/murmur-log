@@ -16,7 +16,9 @@ export function SiteHeader({ home = false, section }: { home?: boolean; section?
       )}
       <nav aria-label="栏目导航">
         <Link href="/projects/" aria-current={section === "projects" ? "page" : undefined}>项目</Link>
+        <span aria-hidden="true">|</span>
         <Link href="/reviews/" aria-current={section === "reviews" ? "page" : undefined}>工作复盘</Link>
+        <span aria-hidden="true">|</span>
         <Link href="/thoughts/" aria-current={section === "thoughts" ? "page" : undefined}>个人思考</Link>
       </nav>
     </header>
