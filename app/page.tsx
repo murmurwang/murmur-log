@@ -17,7 +17,7 @@ export default function Home() {
             <h2 id="thoughts-title">个人思考</h2>
           </div>
           <Link className="stream-row" href="/posts/finding-direction-through-writing/">
-            <strong>在表达中找回方向</strong>
+            <strong>一个工作复盘的方式</strong>
             <time className="post-date" dateTime="2026-11-02">2026.11.02</time>
           </Link>
         </section>
@@ -26,7 +26,7 @@ export default function Home() {
             <h2 id="reviews-title">工作复盘</h2>
           </div>
           <Link className="stream-row" href="/posts/work-review-1102/">
-            <strong>工作复盘 1102｜研究目标是怎么丢掉的</strong>
+            <strong>工作复盘 1102｜目标是怎么弄丢的</strong>
             <time className="post-date" dateTime="2026-11-02">2026.11.02</time>
           </Link>
         </section>

@@ -45,7 +45,7 @@ test("personal writing is published in its own home module", async () => {
   }
   assert.match(home, /href="\/posts\/finding-direction-through-writing\/"/);
   const article = await read("out/posts/finding-direction-through-writing/index.html");
-  assert.match(article, /在表达中找回方向/);
-  assert.match(article, /方向才有机会重新清楚起来。/);
+  assert.match(article, /一个工作复盘的方式/);
+  assert.match(article, /我觉得可以开始尝试规律地更新博客当中的工作复盘。/);
   assert.match(await read("out/feed.xml"), /https:\/\/murmurlog\.com\/posts\/finding-direction-through-writing\//);
 });

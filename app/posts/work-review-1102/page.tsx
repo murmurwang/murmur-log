@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageShell } from "../../components/SiteChrome";
 
-const title = "工作复盘 1102｜研究目标是怎么丢掉的";
+const title = "工作复盘 1102｜目标是怎么弄丢的";
 const description = "研究 DeepSeek Harness 时，方法怎样逐渐偏离了目标，以及目标如何在与 AI 的协作中淡出。";
 const url = "https://murmurlog.com/posts/work-review-1102/";
 

@@ -5,24 +5,24 @@
   <link href="https://murmurlog.com/" />
   <link href="https://murmurlog.com/feed.xml" rel="self" type="application/atom+xml" />
   <id>https://murmurlog.com/</id>
-  <updated>2026-11-02T11:35:54Z</updated>
+  <updated>2026-11-02T12:10:33Z</updated>
   <author><name>Murphy Wang</name></author>
   <entry>
-    <title>在表达中找回方向</title>
+    <title>一个工作复盘的方式</title>
     <link href="https://murmurlog.com/posts/finding-direction-through-writing/" />
     <id>https://murmurlog.com/posts/finding-direction-through-writing/</id>
     <published>2026-11-02T11:35:54Z</published>
-    <updated>2026-11-02T11:35:54Z</updated>
+    <updated>2026-11-02T12:10:33Z</updated>
     <category term="个人思考" />
-    <summary>用语音记录感受和困惑，在表达中重新看清自己，以及真正想去的方向。</summary>
+    <summary>我发现，经常用语音输入写工作复盘和碎碎念，是一种很正念的工作管理方式。</summary>
   </entry>
   <entry>
     <category term="工作复盘" />
-    <title>工作复盘 1102｜研究目标是怎么丢掉的</title>
+    <title>工作复盘 1102｜目标是怎么弄丢的</title>
     <link href="https://murmurlog.com/posts/work-review-1102/" />
     <id>https://murmurlog.com/posts/work-review-1102/</id>
     <published>2026-11-02T10:38:24Z</published>
-    <updated>2026-11-02T10:38:24Z</updated>
+    <updated>2026-11-02T12:10:33Z</updated>
     <summary>研究 DeepSeek Harness 时，方法怎样逐渐偏离了目标，以及目标如何在与 AI 的协作中淡出。</summary>
   </entry>
 </feed>
