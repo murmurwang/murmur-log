@@ -16,7 +16,6 @@ export default function Home() {
           <div className="stream-heading">
             <h2 id="thoughts-title">个人思考</h2>
           </div>
-          <p className="stream-description">感受、困惑，以及对自己的理解。</p>
           <Link className="stream-row" href="/posts/finding-direction-through-writing/">
             <strong>在表达中找回方向</strong>
             <time className="post-date" dateTime="2026-11-02">2026.11.02</time>
@@ -26,7 +25,6 @@ export default function Home() {
           <div className="stream-heading">
             <h2 id="reviews-title">工作复盘</h2>
           </div>
-          <p className="stream-description">回看具体的工作，找到下一步。</p>
           <Link className="stream-row" href="/posts/work-review-1102/">
             <strong>工作复盘 1102｜研究目标是怎么丢掉的</strong>
             <time className="post-date" dateTime="2026-11-02">2026.11.02</time>
@@ -36,7 +34,6 @@ export default function Home() {
           <div className="stream-heading">
             <h2 id="projects-title">项目</h2>
           </div>
-          <p className="stream-description">正在做的事，以及背后的思考。</p>
           <div className="stream-row"><strong>Arcfold</strong></div>
         </section>
       </div>

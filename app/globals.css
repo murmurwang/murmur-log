@@ -30,7 +30,6 @@ nav { display: flex; gap: 22px; color: var(--muted); font-size: 14px; }
 .stream-section { margin-top: 32px; scroll-margin-top: 24px; }
 .stream-heading { padding-bottom: 10px; border-bottom: 1px solid var(--rule); }
 .stream-heading h2 { margin: 0; font-size: 18px; font-weight: 600; }
-.stream-description { margin: 12px 0 4px; color: var(--muted); font-size: 14px; }
 .stream-row { padding: 12px 0; display: flex; align-items: baseline; justify-content: space-between; gap: 24px; font-size: 16px; line-height: 1.7; }
 .stream-row strong { font-weight: 400; }
 .post-date { flex-shrink: 0; color: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; }
