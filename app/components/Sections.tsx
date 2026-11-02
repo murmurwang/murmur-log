@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { ArticleIcon } from "./SiteChrome";
 
 export const sections = [
   { id: "projects", title: "项目", items: [{ title: "Arcfold" }] },
@@ -12,8 +11,7 @@ export function SectionItems({ section }: { section: (typeof sections)[number] }
     <div>
       {section.items.map((item) => "href" in item && item.href ? (
         <Link className="stream-row" href={item.href} key={item.title}>
-          <span className="article-title"><ArticleIcon /><span>{item.title}</span></span>
-          {"date" in item && item.date && <time className="post-date" dateTime={item.date}>{item.date.replaceAll("-", ".")}</time>}
+          <span className="article-title">{item.title}</span>
         </Link>
       ) : <div className="stream-row" key={item.title}><strong>{item.title}</strong></div>)}
     </div>
