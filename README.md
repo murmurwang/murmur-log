@@ -21,6 +21,7 @@ npm test
 
 - `app/page.tsx`：首页，项目、工作复盘、个人思考三个模块；石墨灰背景与简洁文字排版
 - `app/[section]/`：项目、工作复盘、个人思考的独立栏目页
+- `app/projects/arcfold/`：Arcfold 项目介绍，正文来自已确认的 Notion 原文
 - `app/posts/`：已发布文章
 - `public/feed.xml`：RSS/Atom 订阅
 

@@ -5,8 +5,17 @@
   <link href="https://murmurlog.com/" />
   <link href="https://murmurlog.com/feed.xml" rel="self" type="application/atom+xml" />
   <id>https://murmurlog.com/</id>
-  <updated>2026-11-02T12:25:43Z</updated>
+  <updated>2026-11-02T13:04:30Z</updated>
   <author><name>Murphy Wang</name></author>
+  <entry>
+    <title>Arcfold 希望从共同经历中学习，帮助人形成并实现自己的方向</title>
+    <link href="https://murmurlog.com/projects/arcfold/" />
+    <id>https://murmurlog.com/projects/arcfold/</id>
+    <published>2026-11-02T13:04:30Z</published>
+    <updated>2026-11-02T13:04:30Z</updated>
+    <category term="项目" />
+    <summary>Arcfold 探索一种从共同经历中持续改进理解与行动的个人 AI 助手，帮助人逐渐形成并实现自己认可的方向。</summary>
+  </entry>
   <entry>
     <title>用语音输入写工作复盘有助于回归整体目标</title>
     <link href="https://murmurlog.com/posts/finding-direction-through-writing/" />

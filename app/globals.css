@@ -61,3 +61,14 @@ nav a[aria-current="page"] { color: var(--ink); text-decoration: underline; text
   .stream-row { flex-direction: column; gap: 4px; }
   .stream-row[href] .post-date { padding-left: 26px; }
 }
+
+.article-section { padding-top: 24px; }
+.article-section + .article-section { margin-top: 28px; border-top: 1px solid var(--rule); }
+.article-section h2 { margin: 0 0 16px; color: var(--heading); font-size: 20px; font-weight: 600; line-height: 1.5; }
+.post-body blockquote { margin: 20px 0; padding-left: 16px; border-left: 2px solid var(--link-rule); }
+.post-body .process-line { color: var(--muted); }
+.article-table { margin: 24px 0; }
+.article-table table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+.article-table th, .article-table td { padding: 12px; border: 1px solid var(--rule); text-align: left; vertical-align: top; overflow-wrap: anywhere; }
+.article-table th { font-weight: 600; }
+.article-table th:first-child { width: 30%; }

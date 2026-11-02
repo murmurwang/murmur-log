@@ -12,6 +12,7 @@ test("exports every public page", async () => {
   const pages = [
     "out/index.html",
     "out/projects/index.html",
+    "out/projects/arcfold/index.html",
     "out/reviews/index.html",
     "out/thoughts/index.html",
     "out/posts/work-review-1102/index.html",
@@ -65,4 +66,17 @@ test("section navigation and headings lead to the same standalone pages", async 
     assert.match(page, /aria-current="page"/);
     assert.match(page, /href="\/">← 首页/);
   }
+});
+
+
+test("Arcfold project links publish the complete introduction", async () => {
+  const article = await read("out/projects/arcfold/index.html");
+  for (const heading of ["出发点", "目标", "用户价值", "价值检验"]) {
+    assert.ok(article.includes(`<h2>${heading}</h2>`));
+  }
+  assert.match(article, /同一题重答变好，不能代替新任务验证。/);
+  for (const path of ["out/index.html", "out/projects/index.html"]) {
+    assert.ok((await read(path)).includes('href="/projects/arcfold/"'));
+  }
+  assert.ok((await read("out/feed.xml")).includes("https://murmurlog.com/projects/arcfold/"));
 });
