@@ -33,12 +33,16 @@ nav a[aria-current="page"] { color: var(--ink); text-decoration: underline; text
 .section-page { padding-bottom: 64px; }
 .home-stream { padding: 32px 0 64px; }
 .stream-section { padding-bottom: 32px; scroll-margin-top: 24px; }
+.stream-section + .stream-section { padding-top: 28px; border-top: 1px solid var(--rule); }
 .stream-heading { margin-bottom: 8px; }
-.stream-row { display: block; padding: 6px 0; font-size: 16px; line-height: 1.7; }
+.stream-row { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; padding: 6px 0; font-size: 16px; line-height: 1.7; }
 .stream-row strong { font-weight: 400; }
-.article-title { text-decoration: underline; text-decoration-color: var(--link-rule); text-underline-offset: 4px; }
+.article-title { display: flex; align-items: baseline; gap: 10px; min-width: 0; }
+.article-icon { flex-shrink: 0; align-self: center; color: var(--muted); }
+.post-date { flex-shrink: 0; color: var(--muted); font-size: 16px; font-variant-numeric: tabular-nums; }
+.article-title > span { text-decoration: underline; text-decoration-color: var(--link-rule); text-underline-offset: 4px; }
 .stream-row[href]:hover { text-decoration: none; }
-.stream-row[href]:hover .article-title { text-decoration-color: var(--ink); }
+.stream-row[href]:hover .article-title > span { text-decoration-color: var(--ink); }
 .post { padding-bottom: 64px; }
 .post-header { padding: 28px 0 18px; }
 .breadcrumb { color: var(--muted); font-size: 16px; }
@@ -52,4 +56,6 @@ nav a[aria-current="page"] { color: var(--ink); text-decoration: underline; text
 @media (max-width: 600px) {
   .site-header { padding-top: 24px; flex-wrap: wrap; gap: 14px; }
   nav { gap: 10px; }
+  .stream-row { flex-direction: column; gap: 4px; }
+  .stream-row[href] .post-date { padding-left: 26px; }
 }

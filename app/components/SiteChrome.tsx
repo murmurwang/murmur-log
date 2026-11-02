@@ -34,3 +34,12 @@ export function PageShell({ children, section }: { children: ReactNode; section?
 export function Placeholder({ children = "待写" }: { children?: ReactNode }) {
   return <span className="placeholder">{children}</span>;
 }
+
+export function ArticleIcon() {
+  return (
+    <svg className="article-icon" width="16" height="18" viewBox="0 0 16 18" fill="none" aria-hidden="true">
+      <path d="M3 1.5h6l4 4v11H3z" stroke="currentColor" strokeWidth="1.2" strokeLinejoin="round" />
+      <path d="M9 1.5v4h4M5.5 9h5M5.5 12h5" stroke="currentColor" strokeWidth="1.2" strokeLinejoin="round" />
+    </svg>
+  );
+}
