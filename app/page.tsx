@@ -19,7 +19,7 @@ export default function Home() {
             <h2>文章</h2>
           </div>
           <Link className="stream-row" href="/posts/work-review-1102/">
-            <strong>工作复盘 1102</strong>
+            <strong>工作复盘 1102｜研究目标是怎么丢掉的</strong>
             <time className="post-date" dateTime="2026-11-02">2026.11.02</time>
           </Link>
         </div>
