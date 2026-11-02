@@ -1,4 +1,5 @@
 import { SiteHeader } from "./components/SiteChrome";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -17,9 +18,10 @@ export default function Home() {
           <div className="stream-heading">
             <h2>文章</h2>
           </div>
-          <div className="stream-row">
-            <span className="placeholder">第一篇文章标题</span>
-          </div>
+          <Link className="stream-row" href="/posts/work-review-1102/">
+            <strong>工作复盘 1102</strong>
+            <time className="post-date" dateTime="2026-11-02">2026.11.02</time>
+          </Link>
         </div>
 
         <div className="stream-section">

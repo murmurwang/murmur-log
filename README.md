@@ -19,7 +19,8 @@ npm test
 
 ## 内容结构
 
-- `app/page.tsx`：首页，文章和项目仅作文字展示，无子页面或跳转入口
+- `app/page.tsx`：首页，文章链接至正文，项目保留简要展示
+- `app/posts/`：已发布文章
 - `public/feed.xml`：RSS/Atom 订阅
 
-当前内容均为占位，由 Murphy 逐步补充；简要个人介绍将直接放在主页，不设独立关于页面。
+文章由 Murphy 逐步补充；不设独立关于页面。
