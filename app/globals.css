@@ -42,9 +42,9 @@ nav a[aria-current="page"] { color: var(--ink); text-decoration: underline; text
 .article-title { display: flex; align-items: baseline; gap: 10px; min-width: 0; }
 .article-icon { flex-shrink: 0; align-self: center; color: var(--muted); }
 .post-date { flex-shrink: 0; color: var(--muted); font-size: 16px; font-variant-numeric: tabular-nums; }
-.article-title > span { text-decoration: underline; text-decoration-color: var(--link-rule); text-underline-offset: 4px; }
-.stream-row[href]:hover { text-decoration: none; }
-.stream-row[href]:hover .article-title > span { text-decoration-color: var(--ink); }
+.stream-row[href] { margin-inline: -6px; padding-inline: 6px; border-radius: 3px; }
+.stream-row[href]:hover, .stream-row[href]:focus-visible { background: var(--hover); text-decoration: none; }
+.stream-row[href]:hover .article-title, .stream-row[href]:focus-visible .article-title { color: var(--heading); }
 .post { padding-bottom: 64px; }
 .post-header { padding: 28px 0 18px; }
 .breadcrumb { color: var(--muted); font-size: 16px; }
