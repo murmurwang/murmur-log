@@ -5,18 +5,18 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://murmurlog.com"),
   title: "MurMur Log",
   description:
-    "Learning, writing, and building a system for human intention to emerge and become real.",
+    "Agent 独立开发者。学习、写作，构建让人的意图逐渐清晰并成为现实的系统。",
   alternates: { types: { "application/atom+xml": "/feed.xml" } },
   openGraph: {
     title: "MurMur Log",
     description:
-      "Learning, writing, and building a system for human intention to emerge and become real.",
+      "Agent 独立开发者。学习、写作，构建让人的意图逐渐清晰并成为现实的系统。",
     images: [
       {
         url: "/murmur-log-social-v2.png",
         width: 1727,
         height: 911,
-        alt: "MurMur Log — Learning, writing, and building a system for human intention to emerge and become real.",
+        alt: "MurMur Log — Agent 独立开发者。学习、写作，构建让人的意图逐渐清晰并成为现实的系统。",
       },
     ],
   },
