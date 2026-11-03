@@ -14,7 +14,7 @@ export default function ArcfoldProject() {
     <PageShell section="projects">
       <section className="section-page shell" aria-labelledby="project-title">
         <header className="post-header">
-          <Link className="breadcrumb" href="/projects/">← 项目</Link>
+          <Link className="breadcrumb" href="/#projects">← 首页</Link>
           <h1 id="project-title">Arcfold</h1>
           <p className="project-description">探索从共同经历中持续改进理解与行动的个人 AI 助手。</p>
         </header>
