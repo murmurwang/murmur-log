@@ -14,7 +14,7 @@ export const arcfoldArticles: Article[] = [{
 }];
 
 export const sections: Section[] = [
-  { id: "projects", title: "项目", kind: "projects", items: [{ title: "Arcfold", href: "/projects/arcfold/", articles: arcfoldArticles }] },
+  { id: "projects", title: "Agent项目", kind: "projects", items: [{ title: "Arcfold", href: "/projects/arcfold/", articles: arcfoldArticles }] },
   { id: "reviews", title: "工作复盘", kind: "articles", items: [{ title: "研究方法的不断细化让我偏离了最初的研究目标", href: "/posts/work-review-1102/", date: "2026-11-02" }] },
   { id: "thoughts", title: "个人思考", kind: "articles", items: [{ title: "对“如果要高效，反而应该慢下来”的一点体会", href: "/posts/working-mindfully/", date: "2026-11-03" }, { title: "用语音输入写工作复盘有助于回归整体目标", href: "/posts/finding-direction-through-writing/", date: "2026-11-02" }] },
 ];

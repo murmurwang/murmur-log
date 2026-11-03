@@ -12,11 +12,11 @@ export function SiteHeader({ home = false, section }: { home?: boolean; section?
         <Link className="wordmark" href="/" aria-label="MurMur Log home">MurMur Log</Link>
       )}
       <nav aria-label="栏目导航">
-        <Link href="/projects/" aria-current={section === "projects" ? "page" : undefined}>项目</Link>
+        <a href={home ? "#projects" : "/#projects"} aria-current={section === "projects" ? "location" : undefined}>Agent项目</a>
         <span aria-hidden="true">|</span>
-        <Link href="/reviews/" aria-current={section === "reviews" ? "page" : undefined}>工作复盘</Link>
+        <a href={home ? "#reviews" : "/#reviews"} aria-current={section === "reviews" ? "location" : undefined}>工作复盘</a>
         <span aria-hidden="true">|</span>
-        <Link href="/thoughts/" aria-current={section === "thoughts" ? "page" : undefined}>个人思考</Link>
+        <a href={home ? "#thoughts" : "/#thoughts"} aria-current={section === "thoughts" ? "location" : undefined}>个人思考</a>
       </nav>
       {home && <p className="site-description">Learning, writing, and building a system for human intention to emerge and become real.</p>}
     </header>

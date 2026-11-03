@@ -46,7 +46,7 @@ test("personal writing is published in its own home module", async () => {
   const home = await read("out/index.html");
   for (const id of ["thoughts", "reviews", "projects"]) {
     assert.match(home, new RegExp(`id="${id}"`));
-    assert.match(home, new RegExp(`href="/${id}/"`));
+    assert.match(home, new RegExp(`href="#${id}"`));
   }
   assert.match(home, /href="\/posts\/finding-direction-through-writing\/"/);
   const article = await read("out/posts/finding-direction-through-writing/index.html");
@@ -56,15 +56,18 @@ test("personal writing is published in its own home module", async () => {
 });
 
 
-test("section navigation and headings lead to the same standalone pages", async () => {
+test("section navigation targets home anchors and headings are plain text", async () => {
   const home = await read("out/index.html");
   const order = [...home.matchAll(/<section[^>]+id="([^" ]+)"/g)].map((match) => match[1]);
   assert.deepEqual(order, ["projects", "reviews", "thoughts"]);
-  for (const [id, title] of [["projects", "项目"], ["reviews", "工作复盘"], ["thoughts", "个人思考"]]) {
+  for (const [id, title] of [["projects", "Agent项目"], ["reviews", "工作复盘"], ["thoughts", "个人思考"]]) {
     const page = await read(`out/${id}/index.html`);
     assert.match(page, new RegExp(`<h1 id="section-title">${title}</h1>`));
-    assert.equal(home.split(`href="/${id}/"`).length - 1, 2);
-    assert.match(page, /aria-current="page"/);
+    assert.equal(home.split(`href="#${id}"`).length - 1, 1);
+    assert.ok(home.includes(`<h2 id="${id}-title">${title}</h2>`));
+    assert.ok(!home.includes(`href="/${id}/"`));
+    assert.ok(page.includes(`href="/#${id}"`));
+    assert.match(page, /aria-current="location"/);
     assert.match(page, /href="\/">← 首页/);
   }
 });
