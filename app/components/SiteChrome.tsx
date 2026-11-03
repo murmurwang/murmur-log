@@ -44,3 +44,11 @@ export function ArticleIcon() {
     </svg>
   );
 }
+
+export function ProjectIcon() {
+  return (
+    <svg className="project-icon" width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+      <path d="M2 5h6l2 2h8v9H2V5Z" stroke="currentColor" strokeWidth="1.2" strokeLinejoin="round" />
+    </svg>
+  );
+}

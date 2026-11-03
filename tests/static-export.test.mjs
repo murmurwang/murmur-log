@@ -13,6 +13,7 @@ test("exports every public page", async () => {
     "out/index.html",
     "out/projects/index.html",
     "out/projects/arcfold/index.html",
+    "out/projects/arcfold/introduction/index.html",
     "out/reviews/index.html",
     "out/thoughts/index.html",
     "out/posts/work-review-1102/index.html",
@@ -70,7 +71,10 @@ test("section navigation and headings lead to the same standalone pages", async 
 
 
 test("Arcfold project links publish the complete introduction", async () => {
-  const article = await read("out/projects/arcfold/index.html");
+  const project = await read("out/projects/arcfold/index.html");
+  assert.match(project, /<h1 id="project-title">Arcfold<\/h1>/);
+  assert.ok(project.includes('href="/projects/arcfold/introduction/"'));
+  const article = await read("out/projects/arcfold/introduction/index.html");
   for (const heading of ["出发点", "目标", "用户价值", "价值检验"]) {
     assert.ok(article.includes(`<h2>${heading}</h2>`));
   }
