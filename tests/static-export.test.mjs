@@ -60,7 +60,7 @@ test("section navigation targets home anchors and headings are plain text", asyn
   const home = await read("out/index.html");
   const order = [...home.matchAll(/<section[^>]+id="([^" ]+)"/g)].map((match) => match[1]);
   assert.deepEqual(order, ["projects", "reviews", "thoughts"]);
-  for (const [id, title] of [["projects", "Agent项目"], ["reviews", "工作复盘"], ["thoughts", "个人思考"]]) {
+  for (const [id, title] of [["projects", "Agent 项目"], ["reviews", "工作复盘"], ["thoughts", "个人思考"]]) {
     const page = await read(`out/${id}/index.html`);
     assert.match(page, new RegExp(`<h1 id="section-title">${title}</h1>`));
     assert.equal(home.split(`href="#${id}"`).length - 1, 1);

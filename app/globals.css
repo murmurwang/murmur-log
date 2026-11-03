@@ -75,13 +75,9 @@ nav a[aria-current="location"] { color: var(--ink); text-decoration: underline; 
 .article-table th:first-child { width: 30%; }
 
 .project-row { display: flex; align-items: center; gap: 10px; padding: 8px 0; font-size: 16px; font-weight: 600; }
-.project-icon, .project-chevron { flex-shrink: 0; color: var(--muted); }
-.project-row { list-style: none; cursor: pointer; }
-.project-row::-webkit-details-marker { display: none; }
-.project-row:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
-.project-toggle[open] > .project-row .project-chevron { transform: rotate(90deg); }
-.project-link { display: inline-flex; align-items: center; gap: 10px; }
-.project-children { padding-left: 44px; padding-bottom: 4px; }
+.project-icon { flex-shrink: 0; color: var(--muted); }
+.project-row { width: fit-content; }
+.project-children { padding-left: 28px; padding-bottom: 4px; }
 .project-description { margin: 12px 0 0; color: var(--muted); }
 .project-articles { margin-top: 10px; padding-top: 24px; border-top: 1px solid var(--rule); }
 .project-articles h2 { margin: 0 0 8px; font-size: 20px; font-weight: 600; color: var(--heading); }
