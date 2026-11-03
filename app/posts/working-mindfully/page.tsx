@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageShell } from "../../components/SiteChrome";
 
-const title = "在正念的状态下工作，让我更有效地推进目标，也更轻松";
+const title = "对“如果要高效，反而应该慢下来”的一点体会";
 const description = "最近关于以什么样的状态工作有一些心得。";
 const url = "https://murmurlog.com/posts/working-mindfully/";
 
