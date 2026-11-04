@@ -114,7 +114,6 @@ nav a[aria-current="location"] { color: var(--ink); text-decoration: underline; 
 .home-page .stream-section + .stream-section { padding-top: 28px; }
 .home-page .stream-heading { margin-bottom: 16px; }
 .home-page .stream-heading h2 { display: flex; align-items: center; gap: 12px; font-size: 24px; font-weight: 600; color: var(--heading); }
-.home-page .stream-heading .project-icon { width: 24px; height: 24px; }
 .home-page .folder-files { padding-left: 36px; }
 .home-page .stream-row[href] {
   flex-direction: row;
