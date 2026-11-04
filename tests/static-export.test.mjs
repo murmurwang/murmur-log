@@ -78,10 +78,13 @@ test("Arcfold project links publish the complete introduction", async () => {
   assert.match(project, /<h1 id="project-title">Arcfold<\/h1>/);
   assert.ok(project.includes('href="/projects/arcfold/introduction/"'));
   const article = await read("out/projects/arcfold/introduction/index.html");
-  for (const heading of ["出发点", "目标", "用户价值", "价值检验"]) {
-    assert.ok(article.includes(`<h2>${heading}</h2>`));
+  assert.match(article, /共同经历在增加，AI 的理解与工作方式却未必随之改善。/);
+  assert.match(article, /获得更准确贯彻自身意图的长期支持。/);
+  assert.doesNotMatch(article, /同一题重答变好，不能代替新任务验证。/);
+  for (const figure of ["human-loop", "continuous-learning"]) {
+    assert.ok(article.includes(`/images/arcfold/${figure}.png`));
+    await read(`out/images/arcfold/${figure}.png`);
   }
-  assert.match(article, /同一题重答变好，不能代替新任务验证。/);
   for (const path of ["out/index.html", "out/projects/index.html"]) {
     assert.ok((await read(path)).includes('href="/projects/arcfold/"'));
   }

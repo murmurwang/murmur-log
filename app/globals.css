@@ -81,3 +81,9 @@ nav a[aria-current="location"] { color: var(--ink); text-decoration: underline; 
 .project-description { margin: 12px 0 0; color: var(--muted); }
 .project-articles { margin-top: 10px; padding-top: 24px; border-top: 1px solid var(--rule); }
 .project-articles h2 { margin: 0 0 8px; font-size: 20px; font-weight: 600; color: var(--heading); }
+
+.post-body ul { list-style: disc; margin: 20px 0; padding-left: 24px; }
+.post-body li + li { margin-top: 12px; }
+.article-figure { margin: 28px 0; }
+.article-figure img { display: block; width: 100%; height: auto; border-radius: 3px; }
+.article-figure a { display: block; }

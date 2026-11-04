@@ -5,7 +5,7 @@ import { ArticleItems, arcfoldArticles } from "../../components/Sections";
 
 export const metadata: Metadata = {
   title: "Arcfold · MurMur Log",
-  description: "探索从共同经历中持续改进理解与行动的个人 AI 助手。",
+  description: "在共同经历中持续学习和改进，促进人的意图形成与实现。",
   alternates: { canonical: "https://murmurlog.com/projects/arcfold/" },
 };
 
@@ -16,7 +16,7 @@ export default function ArcfoldProject() {
         <header className="post-header">
           <Link className="breadcrumb" href="/#projects">← 首页</Link>
           <h1 id="project-title">Arcfold</h1>
-          <p className="project-description">探索从共同经历中持续改进理解与行动的个人 AI 助手。</p>
+          <p className="project-description">在共同经历中持续学习和改进，促进人的意图形成与实现。</p>
         </header>
         <section className="project-articles" aria-labelledby="project-articles-title">
           <h2 id="project-articles-title">文章</h2>

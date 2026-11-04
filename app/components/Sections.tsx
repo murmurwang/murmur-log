@@ -8,9 +8,9 @@ type Section = { id: string; title: string } & (
 );
 
 export const arcfoldArticles: Article[] = [{
-  title: "Arcfold 希望从共同经历中学习，帮助人形成并实现自己的方向",
+  title: "Arcfold 希望在共同经历中持续学习，支持人的意图形成与实现",
   href: "/projects/arcfold/introduction/",
-  date: "2026-11-02",
+  date: "2026-11-03",
 }];
 
 export const sections: Section[] = [
