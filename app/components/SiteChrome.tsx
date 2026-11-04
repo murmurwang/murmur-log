@@ -9,7 +9,10 @@ export function SiteHeader({ home = false, section }: { home?: boolean; section?
     <>
     <header className={`site-header shell${home ? " site-header--home" : ""}`}>
       {home ? (
-        <h1 className="site-title"><Link href="/">MurMur Log</Link></h1>
+        <div className="header-brand">
+          <h1 className="site-title"><Link href="/">MurMur Log</Link></h1>
+          <ContactLinks />
+        </div>
       ) : (
         <Link className="wordmark" href="/" aria-label="MurMur Log home">MurMur Log</Link>
       )}
@@ -23,7 +26,6 @@ export function SiteHeader({ home = false, section }: { home?: boolean; section?
     </header>
     {home && <div className="home-intro shell">
       <p className="site-description">Agent 独立开发者，<br />构建让人的意图逐渐清晰并成为现实的系统。</p>
-      <ContactLinks />
     </div>}
     </>
   );
