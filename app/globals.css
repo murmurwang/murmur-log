@@ -113,20 +113,21 @@ nav a[aria-current="location"] { color: var(--ink); text-decoration: underline; 
 .home-page .stream-section { padding-bottom: 28px; }
 .home-page .stream-section + .stream-section { padding-top: 28px; }
 .home-page .stream-heading { margin-bottom: 16px; }
-.home-page .stream-heading h2 { font-size: 15px; font-weight: 500; }
-.home-page .project-row { padding: 0 0 12px; font-size: 17px; }
+.home-page .stream-heading h2 { display: flex; align-items: center; gap: 12px; font-size: 24px; font-weight: 600; color: var(--heading); }
+.home-page .stream-heading .project-icon { width: 24px; height: 24px; }
+.home-page .folder-files { padding-left: 36px; }
 .home-page .stream-row[href] {
-  flex-direction: column;
-  gap: 8px;
-  margin: 0;
-  padding: 20px 22px;
-  background: #313336;
-  border-radius: 6px;
+  flex-direction: row;
+  gap: 16px;
+  margin: 0 -8px;
+  padding: 10px 8px;
+  background: transparent;
+  border-radius: 4px;
 }
-.home-page .stream-row + .stream-row { margin-top: 12px; }
-.home-page .article-title { font-size: 20px; line-height: 1.55; font-weight: 600; color: var(--heading); }
+.home-page .stream-row + .stream-row { margin-top: 4px; }
+.home-page .article-title { font-size: 18px; line-height: 1.7; font-weight: 400; color: var(--heading); }
 .home-page .article-icon { margin-top: 0.32em; }
-.home-page .post-date { padding-left: 26px; line-height: 1.5; }
+.home-page .post-date { padding-left: 0; line-height: 30.6px; }
 .home-page .stream-row[href]:hover, .home-page .stream-row[href]:focus-visible { background: #383b3e; }
 
 @media (max-width: 600px) {
@@ -136,7 +137,9 @@ nav a[aria-current="location"] { color: var(--ink); text-decoration: underline; 
   .home-intro .site-description { font-size: 22px; }
   .home-page .stream-section { padding-bottom: 24px; }
   .home-page .stream-section + .stream-section { padding-top: 24px; }
-  .home-page .project-children { padding-left: 18px; }
-  .home-page .stream-row[href] { padding: 16px; }
-  .home-page .article-title { font-size: 18px; line-height: 1.65; }
+  .home-page .stream-heading h2 { font-size: 22px; }
+  .home-page .folder-files { padding-left: 24px; }
+  .home-page .stream-row[href] { flex-direction: column; gap: 2px; }
+  .home-page .post-date { padding-left: 26px; line-height: 1.7; }
+  .home-page .article-title { font-size: 17px; line-height: 1.7; }
 }

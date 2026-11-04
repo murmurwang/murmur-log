@@ -115,11 +115,14 @@ test("section navigation targets home anchors and headings are plain text", asyn
   const home = await read("out/index.html");
   const order = [...home.matchAll(/<section[^>]+id="([^" ]+)"/g)].map((match) => match[1]);
   assert.deepEqual(order, ["projects", "reviews", "thoughts"]);
-  for (const [id, title] of [["projects", "Agent 项目"], ["reviews", "工作复盘"], ["thoughts", "个人思考"]]) {
+  for (const [id, title] of [["projects", "个人项目"], ["reviews", "工作复盘"], ["thoughts", "个人思考"]]) {
     const page = await read(`out/${id}/index.html`);
     assert.match(page, new RegExp(`<h1 id="section-title">${title}</h1>`));
     assert.equal(home.split(`href="#${id}"`).length - 1, 1);
-    assert.ok(home.includes(`<h2 id="${id}-title">${title}</h2>`));
+    const heading = nodes(parse(home)).find((node) => node.tagName === "h2" && node.attrs.some(({ name, value }) => name === "id" && value === `${id}-title`));
+    assert.ok(heading);
+    assert.equal(nodes(heading).filter((node) => node.nodeName === "#text").map((node) => node.value).join(""), title);
+    assert.ok(!nodes(heading).some((node) => node.tagName === "a"));
     assert.ok(!home.includes(`href="/${id}/"`));
     assert.ok(page.includes(`href="/#${id}"`));
     assert.match(page, /aria-current="location"/);
@@ -141,7 +144,8 @@ test("Arcfold project links publish the complete introduction", async () => {
     await read(`out/images/arcfold/${figure}.png`);
   }
   for (const path of ["out/index.html", "out/projects/index.html"]) {
-    assert.ok((await read(path)).includes('href="/projects/arcfold/"'));
+    assert.ok((await read(path)).includes('href="/projects/arcfold/introduction/"'));
+    assert.ok(!(await read(path)).includes('class="project-row"'));
   }
   assert.ok((await read("out/feed.xml")).includes("https://murmurlog.com/projects/arcfold/"));
 });
