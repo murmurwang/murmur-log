@@ -5,6 +5,15 @@ import { parse, parseFragment, serialize } from "parse5";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "../out");
 const attr = (node, name) => node.attrs?.find((item) => item.name === name)?.value;
+const contactActions = await readFile(new URL("./contact-actions.js", import.meta.url), "utf8");
+
+function findNode(node, predicate) {
+  if (predicate(node)) return node;
+  for (const child of node.childNodes ?? []) {
+    const found = findNode(child, predicate);
+    if (found) return found;
+  }
+}
 
 async function optimize(parent) {
   const children = [];
@@ -51,6 +60,12 @@ async function visit(directory) {
     else if (entry.name.endsWith(".html")) {
       const document = parse(await readFile(path, "utf8"));
       await optimize(document);
+      if (findNode(document, (node) => attr(node, "class")?.split(" ").includes("contact-links"))) {
+        const body = findNode(document, (node) => node.tagName === "body");
+        const script = parseFragment(`<script id="contact-actions">${contactActions}</script>`).childNodes[0];
+        script.parentNode = body;
+        body.childNodes.push(script);
+      }
       await writeFile(path, serialize(document));
       count++;
     }

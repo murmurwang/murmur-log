@@ -30,7 +30,12 @@ test("published pages render without script or stylesheet downloads", async () =
     for (const node of elements) {
       const attrs = Object.fromEntries((node.attrs ?? []).map(({ name, value }) => [name, value]));
       if (node.tagName === "style") inlineStyles++;
-      if (node.tagName === "script") assert.equal(attrs.type, "application/ld+json", page.pathname);
+      if (node.tagName === "script" && attrs.type !== "application/ld+json") {
+        assert.equal(attrs.id, "contact-actions", page.pathname);
+        assert.ok(!attrs.src, page.pathname);
+        assert.equal(node.childNodes.map((child) => child.value ?? "").join(""), await read("scripts/contact-actions.js"));
+        assert.ok(page.pathname.endsWith("/out/index.html"), "Contact actions belong only on the home page");
+      }
       if (node.tagName === "link") {
         assert.notEqual(attrs.rel, "stylesheet", page.pathname);
         assert.notEqual(attrs.rel, "modulepreload", page.pathname);

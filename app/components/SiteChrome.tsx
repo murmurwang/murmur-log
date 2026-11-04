@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
+import { ContactLinks } from "./ContactLinks";
 
 export const Arrow = () => <span aria-hidden="true">↗</span>;
 
@@ -22,6 +23,7 @@ export function SiteHeader({ home = false, section }: { home?: boolean; section?
     </header>
     {home && <div className="home-intro shell">
       <p className="site-description">Agent 独立开发者。学习、写作，构建让人的意图逐渐清晰并成为现实的系统。</p>
+      <ContactLinks />
     </div>}
     </>
   );
