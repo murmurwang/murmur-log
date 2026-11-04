@@ -5,6 +5,7 @@ export const Arrow = () => <span aria-hidden="true">↗</span>;
 
 export function SiteHeader({ home = false, section }: { home?: boolean; section?: string }) {
   return (
+    <>
     <header className={`site-header shell${home ? " site-header--home" : ""}`}>
       {home ? (
         <h1 className="site-title"><Link href="/">MurMur Log</Link></h1>
@@ -18,8 +19,12 @@ export function SiteHeader({ home = false, section }: { home?: boolean; section?
         <span aria-hidden="true">|</span>
         <a href={home ? "#thoughts" : "/#thoughts"} aria-current={section === "thoughts" ? "location" : undefined}>个人思考</a>
       </nav>
-      {home && <p className="site-description">Agent 独立开发者。学习、写作，构建让人的意图逐渐清晰并成为现实的系统。</p>}
     </header>
+    {home && <div className="home-intro shell">
+      <p className="home-identity">Agent 独立开发者。</p>
+      <p className="site-description">学习、写作，构建让人的意图逐渐清晰并成为现实的系统。</p>
+    </div>}
+    </>
   );
 }
 

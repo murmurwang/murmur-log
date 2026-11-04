@@ -3,7 +3,7 @@ import { SectionItems, sections } from "./components/Sections";
 
 export default function Home() {
   return (
-    <main>
+    <main className="home-page">
       <SiteHeader home />
       <div className="home-stream shell">
         {sections.map((section) => (
