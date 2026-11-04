@@ -1,12 +1,62 @@
 import assert from "node:assert/strict";
-import { readFile } from "node:fs/promises";
+import { readFile, readdir, access } from "node:fs/promises";
 import test from "node:test";
+import { parse } from "parse5";
 
 const root = new URL("../", import.meta.url);
 
 async function read(path) {
   return readFile(new URL(path, root), "utf8");
 }
+
+async function exportedPages(directory = new URL("out/", root)) {
+  const pages = [];
+  for (const entry of await readdir(directory, { withFileTypes: true })) {
+    const url = new URL(entry.name + (entry.isDirectory() ? "/" : ""), directory);
+    if (entry.isDirectory()) pages.push(...await exportedPages(url));
+    else if (entry.name.endsWith(".html")) pages.push(url);
+  }
+  return pages;
+}
+
+function nodes(node) {
+  return [node, ...(node.childNodes ?? []).flatMap(nodes)];
+}
+
+test("published pages render without script or stylesheet downloads", async () => {
+  for (const page of await exportedPages()) {
+    const elements = nodes(parse(await readFile(page, "utf8")));
+    let inlineStyles = 0;
+    for (const node of elements) {
+      const attrs = Object.fromEntries((node.attrs ?? []).map(({ name, value }) => [name, value]));
+      if (node.tagName === "style") inlineStyles++;
+      if (node.tagName === "script") assert.equal(attrs.type, "application/ld+json", page.pathname);
+      if (node.tagName === "link") {
+        assert.notEqual(attrs.rel, "stylesheet", page.pathname);
+        assert.notEqual(attrs.rel, "modulepreload", page.pathname);
+        assert.ok(!(attrs.rel === "preload" && attrs.as === "script"), page.pathname);
+      }
+    }
+    assert.ok(inlineStyles > 0, page.pathname);
+  }
+});
+
+test("native internal links resolve to published pages and anchors", async () => {
+  for (const page of await exportedPages()) {
+    const elements = nodes(parse(await readFile(page, "utf8")));
+    for (const node of elements.filter((node) => node.tagName === "a")) {
+      const href = node.attrs.find(({ name }) => name === "href")?.value;
+      if (!href || (!href.startsWith("/") && !href.startsWith("#")) || href.startsWith("//")) continue;
+      const target = new URL(href, `https://murmurlog.com/${page.pathname.split("/out/")[1]}`);
+      const path = `out${target.pathname}${target.pathname.endsWith("/") ? "index.html" : ""}`;
+      await access(new URL(path, root));
+      if (target.hash) {
+        const ids = nodes(parse(await read(path))).flatMap((node) => node.attrs?.filter(({ name }) => name === "id").map(({ value }) => value) ?? []);
+        assert.ok(ids.includes(decodeURIComponent(target.hash.slice(1))), `${page.pathname}: ${href}`);
+      }
+    }
+  }
+});
 
 test("exports every public page", async () => {
   const pages = [
