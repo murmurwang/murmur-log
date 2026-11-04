@@ -24,7 +24,7 @@ npm test
 - `app/[section]/`：保留旧栏目地址兼容已分享链接，站内导航不再进入这些页面
 - `app/projects/arcfold/`：Arcfold 项目主页，收录该项目的文章
 - `app/projects/arcfold/introduction/`：项目介绍文章，使用 Murphy 于 2026-11-03 提供的替换正文及关联对话中的两张原图
-- 三个栏目统一以默认铺开的文件夹呈现，文件夹名称突出，文章缩进排列；首页不再设置 Arcfold 中间层。文章保留文档图标、概括全文的标题和发布日期。
+- 三个栏目以醒目的纯文字标题呈现，文章使用浅底色卡片；首页不再设置 Arcfold 中间层。文章保留文档图标、概括全文的标题和发布日期。
 - `app/posts/`：已发布文章
 - `public/feed.xml`：RSS/Atom 订阅
 
