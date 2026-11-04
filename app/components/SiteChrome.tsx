@@ -22,7 +22,7 @@ export function SiteHeader({ home = false, section }: { home?: boolean; section?
       </nav>
     </header>
     {home && <div className="home-intro shell">
-      <p className="site-description">Agent 独立开发者，构建让人的意图逐渐清晰并成为现实的系统。</p>
+      <p className="site-description">Agent 独立开发者，<br />构建让人的意图逐渐清晰并成为现实的系统。</p>
       <ContactLinks />
     </div>}
     </>
