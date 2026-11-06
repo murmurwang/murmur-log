@@ -7,7 +7,7 @@ import humanLoopSmall from "../../../../public/images/arcfold/human-loop-760.web
 import continuousLearningSmall from "../../../../public/images/arcfold/continuous-learning-760.webp";
 import { PageShell } from "../../../components/SiteChrome";
 
-const title = "Arcfold 希望在共同经历中持续学习，支持人的意图形成与实现";
+const title = "Arcfold｜在共同经历中持续学习，支持人的意图形成与实现";
 const description = "Arcfold 是一个以促进人的意图形成与实现为目标，在共同经历中持续学习和改进的个人 AI 系统。";
 const url = "https://murmurlog.com/projects/arcfold/introduction/";
 
