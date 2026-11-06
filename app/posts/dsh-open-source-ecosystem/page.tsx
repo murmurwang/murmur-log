@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageShell } from "../../components/SiteChrome";
 
-const title = "对 DSH 做开源生态的理解";
+const title = "Agent 观察｜对 DSH 做开源生态的理解";
 const description = "DSH 建设 Agent 的通用能力，社区开发者将领域知识和经验做成应用：我对这场分工与循环的理解。";
 const url = "https://murmurlog.com/posts/dsh-open-source-ecosystem/";
 
