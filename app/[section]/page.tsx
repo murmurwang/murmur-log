@@ -8,22 +8,22 @@ type Props = { params: Promise<{ section: string }> };
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return sections.map(({ id }) => ({ section: id }));
+  return [...sections.map(({ id }) => ({ section: id })), { section: "reviews" }];
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { section: id } = await params;
-  const section = sections.find((item) => item.id === id);
+  const section = sections.find((item) => item.id === (id === "reviews" ? "thoughts" : id));
   if (!section) notFound();
-  return { title: `${section.title} · MurMur Log`, alternates: { canonical: `https://murmurlog.com/${id}/` } };
+  return { title: `${section.title} · MurMur Log`, alternates: { canonical: `https://murmurlog.com/${section.id}/` } };
 }
 
 export default async function SectionPage({ params }: Props) {
   const { section: id } = await params;
-  const section = sections.find((item) => item.id === id);
+  const section = sections.find((item) => item.id === (id === "reviews" ? "thoughts" : id));
   if (!section) notFound();
   return (
-    <PageShell section={id}>
+    <PageShell section={section.id}>
       <section className="section-page shell" aria-labelledby="section-title">
         <header className="post-header">
           <Link className="breadcrumb" href="/">← 首页</Link>

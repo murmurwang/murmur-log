@@ -5,8 +5,17 @@
   <link href="https://murmurlog.com/" />
   <link href="https://murmurlog.com/feed.xml" rel="self" type="application/atom+xml" />
   <id>https://murmurlog.com/</id>
-  <updated>2026-11-04T07:07:57Z</updated>
+  <updated>2026-11-06T12:03:11Z</updated>
   <author><name>Murphy Wang</name></author>
+  <entry>
+    <title>对 DSH 做开源生态的理解</title>
+    <link href="https://murmurlog.com/posts/dsh-open-source-ecosystem/" />
+    <id>https://murmurlog.com/posts/dsh-open-source-ecosystem/</id>
+    <published>2026-11-06T12:03:11Z</published>
+    <updated>2026-11-06T12:03:11Z</updated>
+    <category term="个人思考" />
+    <summary>DSH 建设 Agent 的通用能力，社区开发者将领域知识和经验做成应用：我对这场分工与循环的理解。</summary>
+  </entry>
   <entry>
     <title>对“如果要高效，反而应该慢下来”的一点体会</title>
     <link href="https://murmurlog.com/posts/working-mindfully/" />
@@ -22,7 +31,7 @@
     <id>https://murmurlog.com/projects/arcfold/</id>
     <published>2026-11-04T07:07:57Z</published>
     <updated>2026-11-04T07:07:57Z</updated>
-    <category term="项目" />
+    <category term="开源项目" />
     <summary>Arcfold 是一个以促进人的意图形成与实现为目标，在共同经历中持续学习和改进的个人 AI 系统。</summary>
   </entry>
   <entry>
@@ -35,8 +44,8 @@
     <summary>我发现，经常用语音输入写工作复盘和碎碎念，是一种很正念的工作管理方式。</summary>
   </entry>
   <entry>
-    <category term="工作复盘" />
-    <title>研究方法的不断细化让我偏离了最初的研究目标</title>
+    <category term="个人思考" />
+    <title>工作复盘｜研究方法的不断细化让我偏离了最初的研究目标</title>
     <link href="https://murmurlog.com/posts/work-review-1102/" />
     <id>https://murmurlog.com/posts/work-review-1102/</id>
     <published>2026-11-02T10:38:24Z</published>

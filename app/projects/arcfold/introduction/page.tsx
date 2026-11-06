@@ -23,7 +23,7 @@ export default function ArcfoldProject() {
     <PageShell section="projects">
       <article className="post shell">
         <header className="post-header">
-          <Link className="breadcrumb" href="/#projects">← 个人项目</Link>
+          <Link className="breadcrumb" href="/#projects">← 开源项目</Link>
           <h1>{title}</h1>
           <p className="post-meta"><time dateTime="2026-11-03">2026.11.03</time> · Murphy Wang</p>
         </header>

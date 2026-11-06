@@ -14,9 +14,7 @@ export function SiteHeader({ home = false, section }: { home?: boolean; section?
         <Link className="wordmark" href="/" aria-label="MurMur Log home">MurMur Log</Link>
       )}
       <nav aria-label="栏目导航">
-        <a href={home ? "#projects" : "/#projects"} aria-current={section === "projects" ? "location" : undefined}>个人项目</a>
-        <span aria-hidden="true">|</span>
-        <a href={home ? "#reviews" : "/#reviews"} aria-current={section === "reviews" ? "location" : undefined}>工作复盘</a>
+        <a href={home ? "#projects" : "/#projects"} aria-current={section === "projects" ? "location" : undefined}>开源项目</a>
         <span aria-hidden="true">|</span>
         <a href={home ? "#thoughts" : "/#thoughts"} aria-current={section === "thoughts" ? "location" : undefined}>个人思考</a>
       </nav>

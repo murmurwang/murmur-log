@@ -72,6 +72,7 @@ test("exports every public page", async () => {
     "out/reviews/index.html",
     "out/thoughts/index.html",
     "out/posts/work-review-1102/index.html",
+    "out/posts/dsh-open-source-ecosystem/index.html",
     "out/posts/finding-direction-through-writing/index.html",
   ];
 
@@ -99,7 +100,7 @@ test("exports the custom domain and feed without platform bindings", async () =>
 
 test("personal writing is published in its own home module", async () => {
   const home = await read("out/index.html");
-  for (const id of ["thoughts", "reviews", "projects"]) {
+  for (const id of ["thoughts", "projects"]) {
     assert.match(home, new RegExp(`id="${id}"`));
     assert.match(home, new RegExp(`href="#${id}"`));
   }
@@ -114,8 +115,8 @@ test("personal writing is published in its own home module", async () => {
 test("section navigation targets home anchors and headings are plain text", async () => {
   const home = await read("out/index.html");
   const order = [...home.matchAll(/<section[^>]+id="([^" ]+)"/g)].map((match) => match[1]);
-  assert.deepEqual(order, ["projects", "reviews", "thoughts"]);
-  for (const [id, title] of [["projects", "个人项目"], ["reviews", "工作复盘"], ["thoughts", "个人思考"]]) {
+  assert.deepEqual(order, ["projects", "thoughts"]);
+  for (const [id, title] of [["projects", "开源项目"], ["thoughts", "个人思考"]]) {
     const page = await read(`out/${id}/index.html`);
     assert.match(page, new RegExp(`<h1 id="section-title">${title}</h1>`));
     assert.equal(home.split(`href="#${id}"`).length - 1, 1);

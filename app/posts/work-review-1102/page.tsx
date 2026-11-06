@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageShell } from "../../components/SiteChrome";
 
-const title = "研究方法的不断细化让我偏离了最初的研究目标";
+const title = "工作复盘｜研究方法的不断细化让我偏离了最初的研究目标";
 const description = "研究 DeepSeek Harness 时，方法怎样逐渐偏离了目标，以及目标如何在与 AI 的协作中淡出。";
 const url = "https://murmurlog.com/posts/work-review-1102/";
 
@@ -22,10 +22,10 @@ export const metadata: Metadata = {
 
 export default function WorkReview1102() {
   return (
-    <PageShell section="reviews">
+    <PageShell section="thoughts">
       <article className="post shell">
         <header className="post-header">
-          <Link className="breadcrumb" href="/#reviews">← 工作复盘</Link>
+          <Link className="breadcrumb" href="/#thoughts">← 个人思考</Link>
           <h1>{title}</h1>
           <p className="post-meta"><time dateTime="2026-11-02">2026.11.02</time> · Murphy Wang</p>
         </header>
