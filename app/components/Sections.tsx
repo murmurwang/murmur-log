@@ -14,9 +14,9 @@ export const sections: Section[] = [
   { id: "projects", title: "开源项目", items: arcfoldArticles },
   { id: "thoughts", title: "个人思考", items: [
     { title: "对 DSH 做开源生态的理解", href: "/posts/dsh-open-source-ecosystem/", date: "2026-11-06" },
-    { title: "对“如果要高效，反而应该慢下来”的一点体会", href: "/posts/working-mindfully/", date: "2026-11-03" },
+    { title: "自我观察｜对“如果要高效，反而应该慢下来”的一点体会", href: "/posts/working-mindfully/", date: "2026-11-03" },
     { title: "工作复盘｜研究方法的不断细化让我偏离了最初的研究目标", href: "/posts/work-review-1102/", date: "2026-11-02" },
-    { title: "用语音输入写工作复盘有助于回归整体目标", href: "/posts/finding-direction-through-writing/", date: "2026-11-02" },
+    { title: "自我观察｜用语音输入写工作复盘有助于回归整体目标", href: "/posts/finding-direction-through-writing/", date: "2026-11-02" },
   ] },
 ];
 

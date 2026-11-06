@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageShell } from "../../components/SiteChrome";
 
-const title = "用语音输入写工作复盘有助于回归整体目标";
+const title = "自我观察｜用语音输入写工作复盘有助于回归整体目标";
 const description = "我发现，经常用语音输入写工作复盘和碎碎念，是一种很正念的工作管理方式。";
 const url = "https://murmurlog.com/posts/finding-direction-through-writing/";
 
